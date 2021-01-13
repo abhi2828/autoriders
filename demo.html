@@ -1,0 +1,183 @@
+<div class="container" style="height: 0;">
+    <div class="row">
+        <div class="col-md-12">
+         <div class="form-group">
+             <div class="form-checkbox" style="margin-top: 15px;">
+                 <label for="one-way">
+                     <input type="radio" class="flight-type" value="1" id="one-way" name="flight-type" checked>
+                     <span></span>One way
+                 </label>
+                 <label for="roundtrip">
+                     <input type="radio" class="flight-type" value="2" id="roundtrip" name="flight-type" >
+                     <span></span>Roundtrip
+                 </label>
+             </div>
+         </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+    $('.flight-type').click(function(){
+        // debugger;
+    var a = $("input[name='flight-type']:checked").val();
+       if(a==1){
+        $('#One_way').css('display','block');
+        $('#Round').css('display','none'); 
+       }
+       else{
+        $('#One_way').css('display','none');
+        $('#Round').css('display','block'); 
+       }
+    })
+});
+</script>
+
+
+
+<div class="none" id="One_way">
+    <div class="row row-inputs">
+        <div class="container-fluid">
+            <div class="col-sm-12">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchOffLocation3">From</label>
+                    <select class="form-control" aria-placeholder="Select">
+                        <option value="">Select</option>
+                        <option value="16">AHMEDABAD</option>
+                        <option value="17">BENGALURU</option>
+                        <option value="18">DELHI</option>
+                        <option value="21">HYDERABAD</option>
+                        <option value="14">MUMBAI</option>
+                        <option value="15">PUNE</option>                                                            
+                      </select>                                                        
+                </div>
+                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchOffLocation3">To</label>
+                    <select class="form-control" aria-placeholder="Select">
+                        <option value="">Select</option>
+                        <option value="16">AHMEDABAD</option>
+                        <option value="17">BENGALURU</option>
+                        <option value="18">DELHI</option>
+                        <option value="21">HYDERABAD</option>
+                        <option value="14">MUMBAI</option>
+                        <option value="15">PUNE</option>                                                            
+                      </select>                                                        
+                </div>
+                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row row-inputs">
+        <div class="container-fluid">
+            <div class="col-sm-7">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchUpDate3">Picking Up Date</label>
+                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group has-icon has-label selectpicker-wrapper">
+                    <label>Picking Up Time</label>
+                    <select
+                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                            data-toggle="tooltip" title="Select">
+                        <option>20:00 AM</option>
+                        <option>21:00 AM</option>
+                        <option>22:00 AM</option>
+                    </select>
+                    <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-submit">
+        <div class="container-fluid">
+            <div class="inner">
+                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: none;" class="none" id="Round">
+    <div class="row row-inputs">
+        <div class="container-fluid">
+            <div class="col-sm-12">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchOffLocation3">From</label>
+                    <select class="form-control" aria-placeholder="Select">
+                        <option value="">Select</option>
+                        <option value="16">AHMEDABAD</option>
+                        <option value="17">BENGALURU</option>
+                        <option value="18">DELHI</option>
+                        <option value="21">HYDERABAD</option>
+                        <option value="14">MUMBAI</option>
+                        <option value="15">PUNE</option>                                                            
+                      </select>                                                        
+                </div>
+                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchOffLocation3">To</label>
+                    <select class="form-control" aria-placeholder="Select">
+                        <option value="">Select</option>
+                        <option value="16">AHMEDABAD</option>
+                        <option value="17">BENGALURU</option>
+                        <option value="18">DELHI</option>
+                        <option value="21">HYDERABAD</option>
+                        <option value="14">MUMBAI</option>
+                        <option value="15">PUNE</option>                                                            
+                      </select>                                                        
+                </div>
+                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row row-inputs">
+        <div class="container-fluid">
+            <div class="col-sm-4">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchUpDate3">Picking Up Date</label>
+                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group has-icon has-label">
+                    <label for="formSearchUpDate3">Picking Up Date</label>
+                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group has-icon has-label selectpicker-wrapper">
+                    <label>Picking Up Time</label>
+                    <select
+                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                            data-toggle="tooltip" title="Select">
+                        <option>20:00 AM</option>
+                        <option>21:00 AM</option>
+                        <option>22:00 AM</option>
+                    </select>
+                    <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-submit">
+        <div class="container-fluid">
+            <div class="inner">
+                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+            </div>
+        </div>
+    </div>
+</div>

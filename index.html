@@ -35,13 +35,16 @@
     background-image: url('./assets/img/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: auto;
     }
  .offer{
     position: absolute;
     top: 53px;
     text-align: end;
     right: 44%;
+}
+.form-title{
+    margin-top: -30px;
 }
 p.caption-title{
     text-transform: uppercase;
@@ -76,12 +79,6 @@ option:first-child
     .offer{
         display: none;
 }
-.banner{
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* height: 100vh; */
-    }
     .logo a.mobile_logo{
   display: block !important;
 }
@@ -261,6 +258,322 @@ option:first-child
                             <div class="col-md-12">
                                 <!-- Tab panes -->
                                 <div class="tab-content">
+        <!-- CHAUFFER DRIVE -->
+                                    <div role="tabpanel" class="tab-pane fade in active" id="chauffer">
+                                        <div class="caption-content">
+                                            <!-- Search form -->
+                                            <div class="form-search light">
+                                                <div class="form-title">
+                                                    <i class="fa fa-globe"></i>
+                                                    <h2>Search for Cheap Rental Cars Wherever Your Are</h2>
+                                                </div>
+                                                <form action="#">
+                                                    <ul class="nav nav-tabs" role="tablist">
+                                                        <li class="nav-item active">
+                                                          <a class="nav-link active" href="#Outstation" role="tab" data-toggle="tab"> Outstation</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                          <a class="nav-link" href="#Local" role="tab" data-toggle="tab">Local</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                          <a class="nav-link" href="#Airport" role="tab" data-toggle="tab">Airport</a>
+                                                        </li>
+                                                      </ul>
+                                                       <!-- Tab panes -->
+                                                      <div class="tab-content">
+                                                          <br>
+                                                        <div role="tabpanel" class="tab-pane fade in active" id="Outstation">
+                                                            <ul class="nav nav-tabs" role="tablist">
+                                                                <li class="nav-item active">
+                                                                  <a class="nav-link active" href="#One_way" role="tab" data-toggle="tab">One way</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                  <a class="nav-link" href="#Round" role="tab" data-toggle="tab">Round Trip</a>
+                                                                </li>
+                                                            </ul>
+                                                            <!-- Tab panes -->
+                                                            <div class="tab-content">
+                                                                <br>
+                                                                <div role="tabpanel" class="tab-pane fade in active" id="One_way">
+                                                                    <div class="row row-inputs">
+                                                                        <div class="container-fluid">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchOffLocation3">From</label>
+                                                                                    <select class="form-control" aria-placeholder="Select">
+                                                                                        <option value="">Select</option>
+                                                                                        <option value="16">AHMEDABAD</option>
+                                                                                        <option value="17">BENGALURU</option>
+                                                                                        <option value="18">DELHI</option>
+                                                                                        <option value="21">HYDERABAD</option>
+                                                                                        <option value="14">MUMBAI</option>
+                                                                                        <option value="15">PUNE</option>                                                            
+                                                                                      </select>                                                        
+                                                                                </div>
+                                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                            </div>
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchOffLocation3">To</label>
+                                                                                    <select class="form-control" aria-placeholder="Select">
+                                                                                        <option value="">Select</option>
+                                                                                        <option value="16">AHMEDABAD</option>
+                                                                                        <option value="17">BENGALURU</option>
+                                                                                        <option value="18">DELHI</option>
+                                                                                        <option value="21">HYDERABAD</option>
+                                                                                        <option value="14">MUMBAI</option>
+                                                                                        <option value="15">PUNE</option>                                                            
+                                                                                      </select>                                                        
+                                                                                </div>
+                                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="row row-inputs">
+                                                                        <div class="container-fluid">
+                                                                            <div class="col-sm-7">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchUpDate3">Picking Up Date</label>
+                                                                                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                                                                                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-5">
+                                                                                <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                                    <label>Picking Up Time</label>
+                                                                                    <select
+                                                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                                                            data-toggle="tooltip" title="Select">
+                                                                                        <option>20:00 AM</option>
+                                                                                        <option>21:00 AM</option>
+                                                                                        <option>22:00 AM</option>
+                                                                                    </select>
+                                                                                    <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-submit">
+                                                                        <div class="container-fluid">
+                                                                            <div class="inner">
+                                                                                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                                                                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane fade" id="Round">
+                                                                    <div class="row row-inputs">
+                                                                        <div class="container-fluid">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchOffLocation3">From</label>
+                                                                                    <select class="form-control" aria-placeholder="Select">
+                                                                                        <option value="">Select</option>
+                                                                                        <option value="16">AHMEDABAD</option>
+                                                                                        <option value="17">BENGALURU</option>
+                                                                                        <option value="18">DELHI</option>
+                                                                                        <option value="21">HYDERABAD</option>
+                                                                                        <option value="14">MUMBAI</option>
+                                                                                        <option value="15">PUNE</option>                                                            
+                                                                                      </select>                                                        
+                                                                                </div>
+                                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                            </div>
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchOffLocation3">To</label>
+                                                                                    <select class="form-control" aria-placeholder="Select">
+                                                                                        <option value="">Select</option>
+                                                                                        <option value="16">AHMEDABAD</option>
+                                                                                        <option value="17">BENGALURU</option>
+                                                                                        <option value="18">DELHI</option>
+                                                                                        <option value="21">HYDERABAD</option>
+                                                                                        <option value="14">MUMBAI</option>
+                                                                                        <option value="15">PUNE</option>                                                            
+                                                                                      </select>                                                        
+                                                                                </div>
+                                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="row row-inputs">
+                                                                        <div class="container-fluid">
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchUpDate3">Picking Up Date</label>
+                                                                                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                                                                                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group has-icon has-label">
+                                                                                    <label for="formSearchUpDate3">Picking Up Date</label>
+                                                                                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                                                                                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                                    <label>Picking Up Time</label>
+                                                                                    <select
+                                                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                                                            data-toggle="tooltip" title="Select">
+                                                                                        <option>20:00 AM</option>
+                                                                                        <option>21:00 AM</option>
+                                                                                        <option>22:00 AM</option>
+                                                                                    </select>
+                                                                                    <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-submit">
+                                                                        <div class="container-fluid">
+                                                                            <div class="inner">
+                                                                                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                                                                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="Local">
+                                                            <div class="row row-inputs">
+                                                                <div class="container-fluid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchOffLocation3">City</label>
+                                                                            <select class="form-control" aria-placeholder="Select">
+                                                                                <option value="">Select</option>
+                                                                                <option value="16">AHMEDABAD</option>
+                                                                                <option value="17">BENGALURU</option>
+                                                                                <option value="18">DELHI</option>
+                                                                                <option value="21">HYDERABAD</option>
+                                                                                <option value="14">MUMBAI</option>
+                                                                                <option value="15">PUNE</option>                                                            
+                                                                              </select>                                                        
+                                                                        </div>
+                                                                        <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row row-inputs">
+                                                                <div class="container-fluid">
+                                                                    <div class="col-sm-7">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchUpDate3">Picking Up Date</label>
+                                                                            <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                                                                            <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                            <label>Picking Up Time</label>
+                                                                            <select
+                                                                                    class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                                                    data-toggle="tooltip" title="Select">
+                                                                                <option>20:00 AM</option>
+                                                                                <option>21:00 AM</option>
+                                                                                <option>22:00 AM</option>
+                                                                            </select>
+                                                                            <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row row-submit">
+                                                                <div class="container-fluid">
+                                                                    <div class="inner">
+                                                                        <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                                                                        <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane fade" id="Airport">
+                                                            <div class="row row-inputs">
+                                                                <div class="container-fluid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchOffLocation3">From</label>
+                                                                            <select class="form-control" aria-placeholder="Select">
+                                                                                <option value="">Select</option>
+                                                                                <option value="16">AHMEDABAD</option>
+                                                                                <option value="17">BENGALURU</option>
+                                                                                <option value="18">DELHI</option>
+                                                                                <option value="21">HYDERABAD</option>
+                                                                                <option value="14">MUMBAI</option>
+                                                                                <option value="15">PUNE</option>                                                            
+                                                                              </select>                                                        
+                                                                        </div>
+                                                                        <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                    </div>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchOffLocation3">Trip</label>
+                                                                            <select class="form-control" aria-placeholder="Select">
+                                                                                <option value="">Select Trip Type</option>
+                                                                                <option value="16">Cab from the Airport</option>
+                                                                                <option value="17">Cab to the Airport</option>                                                          
+                                                                              </select>                                                        
+                                                                        </div>
+                                                                        <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
+                                                                    </div>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchOffLocation3">Address</label>
+                                                                            <input type="text" class="form-control" id="formSearchOffLocation3" placeholder="Airport or Anywhere">
+                                                                            <span class="form-control-icon"><i class="fa fa-map-marker"></i></span>
+                                                                        </div>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="row row-inputs">
+                                                                <div class="container-fluid">
+                                                                    <div class="col-sm-7">
+                                                                        <div class="form-group has-icon has-label">
+                                                                            <label for="formSearchUpDate3">Picking Up Date</label>
+                                                                            <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
+                                                                            <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group has-icon has-label selectpicker-wrapper">
+                                                                            <label>Picking Up Time</label>
+                                                                            <select
+                                                                                    class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                                                    data-toggle="tooltip" title="Select">
+                                                                                <option>20:00 AM</option>
+                                                                                <option>21:00 AM</option>
+                                                                                <option>22:00 AM</option>
+                                                                            </select>
+                                                                            <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row row-submit">
+                                                                <div class="container-fluid">
+                                                                    <div class="inner">
+                                                                        <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
+                                                                        <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                    
+                                                </form>
+                                            </div>
+                                            <!-- /Search form -->
+                                        </div>                                
+                                    </div>
                                     <div role="tabpanel" class="tab-pane fade" id="self">
                                         <div class="caption-content">
                                             <!-- Search form -->
@@ -317,7 +630,7 @@ option:first-child
                                                             </div>
                                                             <div class="col-sm-5">
                                                                 <div class="form-group has-icon has-label selectpicker-wrapper">
-                                                                    <label>Picking Up Hour</label>
+                                                                    <label>Picking Up Time</label>
                                                                     <select
                                                                             class="selectpicker input-price" data-live-search="true" data-width="100%"
                                                                             data-toggle="tooltip" title="Select">
@@ -342,7 +655,7 @@ option:first-child
                                                             </div>
                                                             <div class="col-sm-5">
                                                                 <div class="form-group has-icon has-label selectpicker-wrapper">
-                                                                    <label>Dropping Off Hour</label>
+                                                                    <label>Dropping Off Time</label>
                                                                     <select
                                                                             class="selectpicker input-price" data-live-search="true" data-width="100%"
                                                                             data-toggle="tooltip" title="Select">
@@ -369,87 +682,6 @@ option:first-child
                                             <!-- /Search form -->
                                         </div>
                                         
-                                    </div>
-        <!-- CHAUFFER DRIVE -->
-                                    <div role="tabpanel" class="tab-pane fade in active" id="chauffer">
-                                        <div class="caption-content">
-                                            <!-- Search form -->
-                                            <div class="form-search light">
-                                                <form action="#">
-                                                    <div class="form-title">
-                                                        <i class="fa fa-globe"></i>
-                                                        <h2>Search for Cheap Rental Cars Wherever Your Are</h2>
-                                                    </div>
-            
-                                                    <div class="row row-inputs">
-                                                        <div class="container-fluid">
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group has-icon has-label">
-                                                                    <label for="formSearchOffLocation3">From</label>
-                                                                    <select class="form-control">
-                                                                        <option>Default select</option>
-                                                                        <option>select 1</option>
-                                                                        <option>select 2</option>
-                                                                        <option>select 3</option>
-                                                                        <option>select 4</option>
-                                                                        <option>select 5</option>                                                            
-                                                                      </select>                                                        
-                                                                </div>
-                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group has-icon has-label">
-                                                                    <label for="formSearchOffLocation3">To</label>
-                                                                    <select class="form-control">
-                                                                        <option>Default select</option>
-                                                                        <option>select 1</option>
-                                                                        <option>select 2</option>
-                                                                        <option>select 3</option>
-                                                                        <option>select 4</option>
-                                                                        <option>select 5</option>                                                            
-                                                                      </select>                                                        
-                                                                </div>
-                                                                <span class="form-control-icon"><i class="fa fa-caret-down"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-            
-                                                    <div class="row row-inputs">
-                                                        <div class="container-fluid">
-                                                            <div class="col-sm-7">
-                                                                <div class="form-group has-icon has-label">
-                                                                    <label for="formSearchUpDate3">Picking Up Date</label>
-                                                                    <input type="text" class="form-control datepicker" id="formSearchUpDate3" placeholder="dd/mm/yyyy">
-                                                                    <span class="form-control-icon"><i class="fa fa-calendar"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-5">
-                                                                <div class="form-group has-icon has-label selectpicker-wrapper">
-                                                                    <label>Picking Up Hour</label>
-                                                                    <select
-                                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
-                                                                            data-toggle="tooltip" title="Select">
-                                                                        <option>20:00 AM</option>
-                                                                        <option>21:00 AM</option>
-                                                                        <option>22:00 AM</option>
-                                                                    </select>
-                                                                    <span class="form-control-icon"><i class="fa fa-clock-o"></i></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row row-submit">
-                                                        <div class="container-fluid">
-                                                            <div class="inner">
-                                                                <i class="fa fa-plus-circle"></i> <a href="#">Advanced Search</a>
-                                                                <button type="submit" id="formSearchSubmit3" class="btn btn-submit ripple-effect btn-theme pull-right">Find Car</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <!-- /Search form -->
-                                        </div>                                
                                     </div>
                                 </div>
                             </div>
@@ -2691,7 +2923,7 @@ option:first-child
                             </li>
                             <li class="media">
                                 <div class="media-left"><i class="fa fa-clock-o"></i></div>
-                                <div class="media-body">Working Hours: 09:30-21:00 except on Sundays</div>
+                                <div class="media-body">Working Times: 09:30-21:00 except on Sundays</div>
                             </li>
                             <li class="media">
                                 <div class="media-left"><i class="fa fa-map-marker"></i></div>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from jthemes.org/html/rentit/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jan 2021 06:38:16 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Autoriders International</title>
+
+    <!-- Favicon -->
+    <link href="./assets/img/favicon.png" rel="icon">
+    <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <!-- CSS Global -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
+    <link href="assets/plugins/owl-carousel2/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/plugins/owl-carousel2/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="assets/plugins/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/plugins/swiper/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Theme CSS -->
+    <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/theme-red-1.css" rel="stylesheet" id="theme-config-link">
+
+    <!-- Head Libs -->
+    <script src="assets/plugins/modernizr.custom.js"></script>
+
+    <style>
+        .header .header-wrapper>.container {
+            position: relative;
+            min-height: 78px;
+        }
+        
+        .header_breadcrum {
+            display: flex;
+        }
+        
+        .col-md-4,
+        .row {
+            /* border: 1px solid red; */
+        }
+        
+        .headingArrow,
+        .headingLink,
+        .headingCurrent {
+            margin: 5px;
+        }
+        
+        .headingArrow2 {
+            margin: 0 10px;
+        }
+        
+        .dynamic_content {
+            display: flex;
+        }
+        
+        .dynamic_date_area {
+            width: 45%;
+        }
+        
+        .tab_top_margin {
+            margin-top: 0;
+        }
+        
+        .some_content p {
+            margin-bottom: 4px;
+        }
+        
+        .footer-widget-heading::before {
+            content: "";
+            position: absolute;
+            left: 150px;
+            bottom: 0px;
+            height: 44px;
+            width: 2px;
+            background: #000000;
+        }
+        
+        .pick_up_date_dynamic {
+            font-weight: 800;
+            font-size: 15px;
+        }
+        
+        .modify_btn {
+            color: red;
+        }
+        
+        .text_content {
+            text-align: center;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav>li>a {
+            position: relative;
+            display: block;
+            padding: 10px 15px 0 47px;
+        }
+        
+        .nav-tabs>li {
+            float: left;
+            margin: 0 15px;
+            width: 150px;
+        }
+        
+        .rotate {
+            -moz-transition: all 0s linear;
+            -webkit-transition: all 0s linear;
+            transition: all 0s linear;
+            margin-top: 2px;
+            margin-left: 10px;
+        }
+        
+        .rotate.down {
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        
+        .details {
+            width: 150px;
+            border: none;
+            background: none;
+            text-align: inherit;
+        }
+        
+        button.select {
+            width: 150px;
+            height: 43px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        
+        .grid {
+            list-style: none;
+            margin-left: -40px;
+        }
+        
+        .gc {
+            box-sizing: border-box;
+            display: inline-block;
+            margin-right: -0.25em;
+            min-height: 1px;
+            padding-left: 40px;
+            vertical-align: top;
+        }
+        
+        .naccs {
+            position: relative;
+            max-width: 900px;
+        }
+        
+        .naccs .menu div {
+            padding: 15px 20px 15px 40px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            background: #ff0000;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+            vertical-align: middle;
+            font-weight: 700;
+            transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        .naccs .menu div:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .naccs .menu div span.light {
+            height: 10px;
+            width: 10px;
+            position: absolute;
+            top: 24px;
+            left: 15px;
+            background-color: #ffffff;
+            border-radius: 100%;
+            transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        .naccs .menu div.active span.light {
+            background-color: #fbc02d;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            top: 0;
+            border-radius: 0;
+        }
+        
+        .naccs .menu div.active {
+            color: #fbc02d;
+            padding: 15px 20px 15px 20px;
+        }
+        
+        ul.nacc {
+            position: relative;
+            height: 0px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        ul.nacc li {
+            opacity: 0;
+            transform: translateX(50px);
+            position: absolute;
+            list-style: none;
+            transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        
+        ul.nacc li.active {
+            transition-delay: 0.3s;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        
+        ul.nacc li p {
+            margin: 0;
+        }
+        
+        .col-md-4.Exclusions_detail_icon2,
+        .col-md-4.Facilities_detail_icon3 {
+            margin-top: 0 !important;
+        }
+        
+        .Inclusions_detail_icon,
+        .Facilities_detail_icon3 {
+            width: 150px;
+            text-align: center;
+        }
+        
+        .Exclusions_detail_icon2 {
+            margin-right: 6%;
+            width: 150px;
+            text-align: center;
+        }
+        
+        .Inclusions_content {
+            text-align: center;
+        }
+        
+        .inline_icon2 {
+            display: flex;
+            margin-top: 0px;
+        }
+        
+        .inline_icon {
+            display: flex;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body id="home" class="wide">
+    <!-- PRELOADER -->
+    <!-- <div id="preloader">
+    <div id="preloader-status">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div id="preloader-title">Loading</div>
+    </div>
+</div> -->
+    <!-- /PRELOADER -->
+
+    <header class="header fixed">
+        <div class="header-wrapper">
+            <div class="container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a class="web_logo" href="index-2.html"><img src="assets/img/logo.png" alt="Autoriders" /></a>
+                    <a class="mobile_logo" href=""><img src="./assets/img/logo_mobile.png" alt=""></a>
+                </div>
+                <!-- /Logo -->
+
+                <!-- Mobile menu toggle button -->
+                <a href="#" class="menu-toggle btn ripple-effect btn-theme-transparent"><i class="fa fa-bars"></i></a>
+                <!-- /Mobile menu toggle button -->
+
+                <!-- Navigation -->
+                <!-- <nav class="navigation closed clearfix">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
+                            <ul class="nav sf-menu">
+                                <li class="active"><a href="#">Home</a>
+                                    <ul>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Hot Deals</a></li>
+                                <li><a href="#">Vehicles</a></li>
+                                <li><a href="#">FAQS</a></li>
+                                <li class="megamenu sale"><a href="#">About Us</a>
+                                    <ul>
+                                        <li class="row">
+                                            <div class="col-md-3">
+                                                <h4 class="block-title"><span>Paragraph</span></h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                                <p>Suspendisse molestie est nec tortor placerat, vel pellentesque metus sollicitudin. Suspendisse congue sem mauris, at ultrices felis blandit non.</p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4 class="block-title"><span>Portfolio</span></h4>
+                                                <ul>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4 class="block-title"><span>Pages</span></h4>
+                                                <ul>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4 class="block-title"><span>Pages</span></h4>
+                                                <ul>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                    <li><a href="#">Home 1</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Blog</a>
+                                    <ul>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </nav> -->
+                <!-- /Navigation -->
+
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header_breadcrum">
+                    <div class="headingLink float-left" routerlink="" tabindex="0">Home</div>
+                    <div class="float-left headingArrow"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+                    <div class="headingCurrent float-left"> Select Car</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5" style="margin-top: 0 !important;padding-left: 0;">
+                    <div class="col-md-12 header_breadcrum">
+                        <div class="headingLink2 float-left2" routerlink="" tabindex="0">Mumbai </div>
+                        <div class="float-left2 headingArrow2"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+                        <div class="headingCurrent2 float-left2"> Local (4hr/40 km)</div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="margin-top: 0 !important;">
+                    <div class="dynamic_content">
+                        <div class="dynamic_date_area footer-widget-heading">
+                            <div class="pick_up_date_text">
+                                Pick up
+                                <span style="margin-left: 10px;"><i class="fa fa-calendar"></i></span>
+                            </div>
+                            <div class="pick_up_date_dynamic">
+                                28-01-2021
+                            </div>
+
+                        </div>
+                        <div class="dynamic_time_area">
+                            <div class="pick_up_date_text">
+                                Time
+                                <span style="margin-left: 10px;"><i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <div class="pick_up_date_dynamic">
+                                2:45 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-top: 0 !important;">
+                    <button class="modify_btn">modify</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- Bootstrap CSS -->
+                    <!-- jQuery first, then Bootstrap JS. -->
+                    <!-- Nav tabs -->
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">buzz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                            <div class="row tab_top_margin">
+                                <div class="col-md-2">
+                                    <div class="img_div">
+                                        <img src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
+                                    </div>
+                                    <div class="info">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Toyota Etios</h4>
+                                    <p>or equivalent
+                                        <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
+                                    </p>
+                                </div>
+                                <div class="col-md-2 some_content">
+                                    <h4>Includes 80 km</h4>
+                                    <p>and 8 hours</p>
+                                    <div class="wrapper center-block">
+                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                            <div class="panel-default">
+                                                <div class="" role="tab" id="headingTwo">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        <button class="details">Details<i class="fa fa-chevron-down rotate"></i></button>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <h4>₹1800</h4>
+                                    <p>Save ₹ 193</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1607</h4>
+                                    <p>Inclusive of GST</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="select"> Select</button>
+                                </div>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="naccs">
+                                                <div class="grid">
+                                                    <div class="gc col-md-4">
+                                                        <div class="menu">
+                                                            <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                            <div><span class="light"></span><span>Wine</span></div>
+                                                            <div><span class="light"></span><span>Lemonade</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="gc col-md-8">
+                                                        <ul class="nacc">
+                                                            <li class="active inline_icon">
+                                                                <div class="Inclusions_detail_icon">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Base Fare</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Inclusions_detail_icon">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Driver Allowance</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Inclusions_detail_icon">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>GST (5%)</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="inline_icon2">
+                                                                <div class="inline_icon">
+                                                                    <div class="Exclusions_detail_icon2">
+                                                                        <div class="img_div">
+                                                                            <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
+                                                                        </div>
+                                                                        <div class="Inclusions_content">
+                                                                            <p>Pay ₹12/km after 120 km</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="Exclusions_detail_icon2">
+                                                                        <div class="img_div">
+                                                                            <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
+                                                                        </div>
+                                                                        <div class="Inclusions_content">
+                                                                            <p>Pay ₹125/hr after 12 hours</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="Exclusions_detail_icon2">
+                                                                        <div class="img_div">
+                                                                            <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
+                                                                        </div>
+                                                                        <div class="Inclusions_content">
+                                                                            <p>Toll / State tax</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="inline_icon">
+                                                                    <div class="Exclusions_detail_icon2">
+                                                                        <div class="img_div">
+                                                                            <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
+                                                                        </div>
+                                                                        <div class="Inclusions_content">
+                                                                            <p>Night Allowance (₹275)</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="Exclusions_detail_icon2">
+                                                                        <div class="img_div">
+                                                                            <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
+                                                                        </div>
+                                                                        <div class="Inclusions_content">
+                                                                            <p>Parking</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="inline_icon">
+                                                                <div class="Facilities_detail_icon3">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>4 seater</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Facilities_detail_icon3">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>2 bags</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Facilities_detail_icon3">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>AC</p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
+                        <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                        </div>
+                        <div role="tabpanel " class="tab-pane fade " id="buzz ">bbb</div>
+                        <div role="tabpanel " class="tab-pane fade " id="references ">ccc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+    </section>
+
+    <!-- JS Global -->
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+    <script src="assets/plugins/bootstrap-select/js/bootstrap-select.min.js "></script>
+    <script src="assets/plugins/superfish/js/superfish.min.js "></script>
+    <script src="assets/plugins/prettyphoto/js/jquery.prettyPhoto.js "></script>
+    <script src="assets/plugins/owl-carousel2/owl.carousel.min.js "></script>
+    <script src="assets/plugins/jquery.sticky.min.js "></script>
+    <script src="assets/plugins/jquery.easing.min.js "></script>
+    <script src="assets/plugins/jquery.smoothscroll.min.js "></script>
+    <!--<script src="assets/plugins/smooth-scrollbar.min.js "></script>-->
+    <!--<script src="assets/plugins/wow/wow.min.js "></script>-->
+    <script>
+        // WOW - animated content
+        //new WOW().init();
+    </script>
+    <script src="assets/plugins/swiper/js/swiper.jquery.min.js "></script>
+    <script src="assets/plugins/datetimepicker/js/moment-with-locales.min.js "></script>
+    <script src="assets/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js "></script>
+
+    <!-- JS Page Level -->
+    <script src="assets/js/theme-ajax-mail.js "></script>
+    <script src="assets/js/theme.js "></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false "></script>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip "]').tooltip({
+                    delay: {
+                        "show ": 500,
+                        "hide ": 100
+                    }
+                })
+                // rotate arrow top down
+            $('button').click(function() {
+                $('.rotate').toggleClass("down ");
+            })
+        })
+
+        // vertical tab options
+        $(document).on("click ", ".naccs .menu div ", function() {
+            var numberIndex = $(this).index();
+
+            if (!$(this).is("active ")) {
+                $(".naccs .menu div ").removeClass("active ");
+                $(".naccs ul li ").removeClass("active ");
+
+                $(this).addClass("active ");
+                $(".naccs ul ").find("li:eq( " + numberIndex + ") ").addClass("active ");
+
+                var listItemHeight = $(".naccs ul ")
+                    .find("li:eq( " + numberIndex + ") ")
+                    .innerHeight();
+                $(".naccs ul ").height(listItemHeight + "px ");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

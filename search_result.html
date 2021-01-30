@@ -32,6 +32,23 @@
     <script src="assets/plugins/modernizr.custom.js"></script>
 
     <style>
+        .header {
+            padding: 10px 16px;
+            background: white;
+            z-index: 10000;
+            width: 100% !important;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky+.content {
+            padding-top: 102px;
+        }
+        
         .header .header-wrapper>.container {
             position: relative;
             min-height: 78px;
@@ -103,13 +120,8 @@
         .nav>li>a {
             position: relative;
             display: block;
-            padding: 10px 15px 0 47px;
-        }
-        
-        .nav-tabs>li {
-            float: left;
-            margin: 0 15px;
-            width: 150px;
+            padding: 10px 45px 2px 45px;
+            margin: 0 17px;
         }
         
         .rotate {
@@ -134,10 +146,17 @@
         }
         
         button.select {
-            width: 150px;
-            height: 43px;
+            width: 100px;
+            height: 39px;
             margin-top: 30px;
             font-size: 20px;
+        }
+        
+        .tab-content {
+            border-left: 1px solid;
+            padding: 17px;
+            border-bottom: 1px solid #dddddd;
+            border-right: 1px solid;
         }
         
         .grid {
@@ -258,6 +277,32 @@
             display: flex;
             margin-top: 30px;
         }
+        
+        .logo_div img {
+            margin: 10px;
+        }
+        
+        #collapseTwo,
+        #collapseTwo2,
+        #collapseTwo3 {
+            display: none;
+        }
+        
+        .details_btn,
+        .details_btn2,
+        .details_btn22,
+        .details_btn3,
+        .details_btn33 {
+            border: none;
+        }
+        
+        .main_option {
+            border-bottom: 1px solid;
+        }
+        
+        .tab_top_margin {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 
@@ -277,97 +322,19 @@
 </div> -->
     <!-- /PRELOADER -->
 
-    <header class="header fixed">
-        <div class="header-wrapper">
-            <div class="container">
 
-                <!-- Logo -->
-                <div class="logo">
-                    <a class="web_logo" href="index-2.html"><img src="assets/img/logo.png" alt="Autoriders" /></a>
-                    <a class="mobile_logo" href=""><img src="./assets/img/logo_mobile.png" alt=""></a>
+
+
+    <header class="header" id="myHeader">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo_div"><img src="./assets/img/logo.png" alt="logo"></div>
                 </div>
-                <!-- /Logo -->
-
-                <!-- Mobile menu toggle button -->
-                <a href="#" class="menu-toggle btn ripple-effect btn-theme-transparent"><i class="fa fa-bars"></i></a>
-                <!-- /Mobile menu toggle button -->
-
-                <!-- Navigation -->
-                <!-- <nav class="navigation closed clearfix">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
-                            <ul class="nav sf-menu">
-                                <li class="active"><a href="#">Home</a>
-                                    <ul>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Hot Deals</a></li>
-                                <li><a href="#">Vehicles</a></li>
-                                <li><a href="#">FAQS</a></li>
-                                <li class="megamenu sale"><a href="#">About Us</a>
-                                    <ul>
-                                        <li class="row">
-                                            <div class="col-md-3">
-                                                <h4 class="block-title"><span>Paragraph</span></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                                                <p>Suspendisse molestie est nec tortor placerat, vel pellentesque metus sollicitudin. Suspendisse congue sem mauris, at ultrices felis blandit non.</p>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <h4 class="block-title"><span>Portfolio</span></h4>
-                                                <ul>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <h4 class="block-title"><span>Pages</span></h4>
-                                                <ul>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <h4 class="block-title"><span>Pages</span></h4>
-                                                <ul>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                    <li><a href="#">Home 1</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                        <li><a href="#">Home 1</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </nav> -->
-                <!-- /Navigation -->
-
             </div>
         </div>
-
     </header>
-    <section>
+    <section class="first_sec">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 header_breadcrum">
@@ -417,33 +384,183 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
-                    <!-- Bootstrap CSS -->
-                    <!-- jQuery first, then Bootstrap JS. -->
-                    <!-- Nav tabs -->
-
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="nav-item active">
-                            <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">profile</a>
+                            <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">4hr/40 km</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">buzz</a>
+                            <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">6hr/80 km</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#references" role="tab" data-toggle="tab">references</a>
+                            <a class="nav-link" href="#references" role="tab" data-toggle="tab">7hr/100 km</a>
                         </li>
                     </ul>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                </div>
+            </div>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                    <div class="main_option">
+                        <div class="container">
                             <div class="row tab_top_margin">
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-sm-4">
                                     <div class="img_div">
-                                        <img src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
+                                        <img class="car_img" src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
                                     </div>
-                                    <div class="info">
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <h4>Toyota Etios</h4>
+                                    <p>or equivalent
+                                        <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
+                                    </p>
+                                    <button class="details_btn">Details<i class="fa fa-chevron-down rotate"></i></button>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <h4>₹1800</h4>
+                                    <p>Save ₹ 193</p>
 
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <h4>₹1607</h4>
+                                    <p>Inclusive of GST</p>
+
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <button class="select"> Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- my code here -->
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="naccs">
+                                            <div class="grid">
+                                                <div class="gc col-md-4">
+                                                    <div class="menu">
+                                                        <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                        <div><span class="light"></span><span>Exclusions</span></div>
+                                                        <div><span class="light"></span><span>Facilities</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gc col-md-8">
+                                                    <ul class="nacc">
+                                                        <li class="active inline_icon">
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Base Fare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Driver Allowance</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>GST (5%)</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon2">
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹12/km after 120 km</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹125/hr after 12 hours</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Toll / State tax</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Night Allowance (₹275)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Parking</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon">
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>4 seater</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>2 bags</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>AC</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    <div class="main_option">
+                        <div class="container">
+                            <div class="row tab_top_margin">
+                                <div class="col-md-3 col-xs-3">
+                                    <div class="img_div">
+                                        <img class="car_img" src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
@@ -451,23 +568,9 @@
                                     <p>or equivalent
                                         <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
                                     </p>
+                                    <button class="details_btn2">Details<i class="fa fa-chevron-down rotate"></i></button>
                                 </div>
-                                <div class="col-md-2 some_content">
-                                    <h4>Includes 80 km</h4>
-                                    <p>and 8 hours</p>
-                                    <div class="wrapper center-block">
-                                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                            <div class="panel-default">
-                                                <div class="" role="tab" id="headingTwo">
-                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                        <button class="details">Details<i class="fa fa-chevron-down rotate"></i></button>
-                                                    </a>
-                                                </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="col-md-2">
                                     <h4>₹1800</h4>
@@ -483,121 +586,122 @@
                                     <button class="select"> Select</button>
                                 </div>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="naccs">
-                                                <div class="grid">
-                                                    <div class="gc col-md-4">
-                                                        <div class="menu">
-                                                            <div class="active"><span class="light"></span><span>Inclusions</span></div>
-                                                            <div><span class="light"></span><span>Wine</span></div>
-                                                            <div><span class="light"></span><span>Lemonade</span></div>
-                                                        </div>
+                        </div>
+                        <!-- my code here -->
+                        <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="naccs">
+                                            <div class="grid">
+                                                <div class="gc col-md-4">
+                                                    <div class="menu">
+                                                        <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                        <div><span class="light"></span><span>Exclusions</span></div>
+                                                        <div><span class="light"></span><span>Facilities</span></div>
                                                     </div>
-                                                    <div class="gc col-md-8">
-                                                        <ul class="nacc">
-                                                            <li class="active inline_icon">
-                                                                <div class="Inclusions_detail_icon">
+                                                </div>
+                                                <div class="gc col-md-8">
+                                                    <ul class="nacc">
+                                                        <li class="active inline_icon">
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Base Fare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Driver Allowance</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>GST (5%)</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon2">
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
                                                                     <div class="img_div">
-                                                                        <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                        <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
                                                                     </div>
                                                                     <div class="Inclusions_content">
-                                                                        <p>Base Fare</p>
+                                                                        <p>Pay ₹12/km after 120 km</p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="Inclusions_detail_icon">
+                                                                <div class="Exclusions_detail_icon2">
                                                                     <div class="img_div">
-                                                                        <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                        <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
                                                                     </div>
                                                                     <div class="Inclusions_content">
-                                                                        <p>Driver Allowance</p>
+                                                                        <p>Pay ₹125/hr after 12 hours</p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="Inclusions_detail_icon">
+                                                                <div class="Exclusions_detail_icon2">
                                                                     <div class="img_div">
-                                                                        <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                        <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
                                                                     </div>
                                                                     <div class="Inclusions_content">
-                                                                        <p>GST (5%)</p>
+                                                                        <p>Toll / State tax</p>
                                                                     </div>
                                                                 </div>
-                                                            </li>
-                                                            <li class="inline_icon2">
-                                                                <div class="inline_icon">
-                                                                    <div class="Exclusions_detail_icon2">
-                                                                        <div class="img_div">
-                                                                            <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
-                                                                        </div>
-                                                                        <div class="Inclusions_content">
-                                                                            <p>Pay ₹12/km after 120 km</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="Exclusions_detail_icon2">
-                                                                        <div class="img_div">
-                                                                            <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
-                                                                        </div>
-                                                                        <div class="Inclusions_content">
-                                                                            <p>Pay ₹125/hr after 12 hours</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="Exclusions_detail_icon2">
-                                                                        <div class="img_div">
-                                                                            <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
-                                                                        </div>
-                                                                        <div class="Inclusions_content">
-                                                                            <p>Toll / State tax</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="inline_icon">
-                                                                    <div class="Exclusions_detail_icon2">
-                                                                        <div class="img_div">
-                                                                            <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
-                                                                        </div>
-                                                                        <div class="Inclusions_content">
-                                                                            <p>Night Allowance (₹275)</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="Exclusions_detail_icon2">
-                                                                        <div class="img_div">
-                                                                            <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
-                                                                        </div>
-                                                                        <div class="Inclusions_content">
-                                                                            <p>Parking</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                            <li class="inline_icon">
-                                                                <div class="Facilities_detail_icon3">
+                                                            </div>
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
                                                                     <div class="img_div">
-                                                                        <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                        <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
                                                                     </div>
                                                                     <div class="Inclusions_content">
-                                                                        <p>4 seater</p>
+                                                                        <p>Night Allowance (₹275)</p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="Facilities_detail_icon3">
+                                                                <div class="Exclusions_detail_icon2">
                                                                     <div class="img_div">
-                                                                        <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                        <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
                                                                     </div>
                                                                     <div class="Inclusions_content">
-                                                                        <p>2 bags</p>
+                                                                        <p>Parking</p>
                                                                     </div>
                                                                 </div>
-                                                                <div class="Facilities_detail_icon3">
-                                                                    <div class="img_div">
-                                                                        <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
-                                                                    </div>
-                                                                    <div class="Inclusions_content">
-                                                                        <p>AC</p>
-                                                                    </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon">
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
                                                                 </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>4 seater</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>2 bags</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>AC</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -605,21 +709,476 @@
                                 </div>
                             </div>
                         </div>
-                        <div role="tabpanel" class="tab-pane fade" id="buzz">bbb</div>
-                        <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
                     </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+                    <div class="main_option">
+                        <div class="container">
+                            <div class="row tab_top_margin">
+                                <div class="col-md-2">
+                                    <div class="img_div">
+                                        <img class="car_img" src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Toyota Etios</h4>
+                                    <p>or equivalent
+                                        <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
+                                    </p>
+                                    <button class="details_btn22">Details<i class="fa fa-chevron-down rotate"></i></button>
+                                </div>
+
+
+                                <div class="col-md-2">
+                                    <h4>₹1800</h4>
+                                    <p>Save ₹ 193</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1607</h4>
+                                    <p>Inclusive of GST</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="select"> Select</button>
+                                </div>
+                            </div>
                         </div>
-                        <div role="tabpanel " class="tab-pane fade " id="buzz ">bbb</div>
-                        <div role="tabpanel " class="tab-pane fade " id="references ">ccc</div>
+                        <!-- my code here -->
+                        <div id="collapseTwo22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="naccs">
+                                            <div class="grid">
+                                                <div class="gc col-md-4">
+                                                    <div class="menu">
+                                                        <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                        <div><span class="light"></span><span>Exclusions</span></div>
+                                                        <div><span class="light"></span><span>Facilities</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gc col-md-8">
+                                                    <ul class="nacc">
+                                                        <li class="active inline_icon">
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Base Fare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Driver Allowance</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>GST (5%)</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon2">
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹12/km after 120 km</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹125/hr after 12 hours</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Toll / State tax</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Night Allowance (₹275)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Parking</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon">
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>4 seater</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>2 bags</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>AC</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="references">
+                    <div class="main_option">
+                        <div class="container">
+                            <div class="row tab_top_margin">
+                                <div class="col-md-2">
+                                    <div class="img_div">
+                                        <img class="car_img" src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Toyota Etios</h4>
+                                    <p>or equivalent
+                                        <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
+                                    </p>
+                                    <button class="details_btn3">Details<i class="fa fa-chevron-down rotate"></i></button>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1800</h4>
+                                    <p>Save ₹ 193</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1607</h4>
+                                    <p>Inclusive of GST</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="select"> Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- my code here -->
+                        <div id="collapseTwo3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 tab2_option1">
+                                        <div class="naccs">
+                                            <div class="grid">
+                                                <div class="gc col-md-4">
+                                                    <div class="menu">
+                                                        <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                        <div><span class="light"></span><span>Exclusions</span></div>
+                                                        <div><span class="light"></span><span>Facilities</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gc col-md-8">
+                                                    <ul class="nacc">
+                                                        <li class="active inline_icon">
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Base Fare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Driver Allowance</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>GST (5%)</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon2">
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹12/km after 120 km</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹125/hr after 12 hours</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Toll / State tax</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Night Allowance (₹275)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Parking</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon">
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>4 seater</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>2 bags</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>AC</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_option">
+                        <div class="container">
+                            <div class="row tab_top_margin">
+                                <div class="col-md-2">
+                                    <div class="img_div">
+                                        <img class="car_img" src="./assets/img/search/Toyota Etios.jpg" alt="Toyota Etios" title="Toyota Etios">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>Toyota Etios</h4>
+                                    <p>or equivalent
+                                        <i class="fa fa-info-circle" style="color: red;" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Includes Ac cabs like Amaze Aspire, Dzire, Etios, Fiesta, Manza, Verito, Xcent or Zest"></i>
+                                    </p>
+                                    <button class="details_btn33">Details<i class="fa fa-chevron-down rotate"></i></button>
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1800</h4>
+                                    <p>Save ₹ 193</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <h4>₹1607</h4>
+                                    <p>Inclusive of GST</p>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="select"> Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- my code here -->
+                        <div id="collapseTwo33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="naccs">
+                                            <div class="grid">
+                                                <div class="gc col-md-4">
+                                                    <div class="menu">
+                                                        <div class="active"><span class="light"></span><span>Inclusions</span></div>
+                                                        <div><span class="light"></span><span>Exclusions</span></div>
+                                                        <div><span class="light"></span><span>Facilities</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="gc col-md-8">
+                                                    <ul class="nacc">
+                                                        <li class="active inline_icon">
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Base Fare</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>Driver Allowance</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Inclusions_detail_icon">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/inclusions_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>GST (5%)</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon2">
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon1.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹12/km after 120 km</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon2.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Pay ₹125/hr after 12 hours</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon3.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Toll / State tax</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="inline_icon">
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon4.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Night Allowance (₹275)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="Exclusions_detail_icon2">
+                                                                    <div class="img_div">
+                                                                        <img src="./assets/img/icons/exclusions_icon5.png" alt="Base Fare">
+                                                                    </div>
+                                                                    <div class="Inclusions_content">
+                                                                        <p>Parking</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="inline_icon">
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon1.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>4 seater</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon2.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>2 bags</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="Facilities_detail_icon3">
+                                                                <div class="img_div">
+                                                                    <img src="./assets/img/icons/facilities_icon3.png" alt="Base Fare">
+                                                                </div>
+                                                                <div class="Inclusions_content">
+                                                                    <p>AC</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <br><br><br><br>
     </section>
+
 
     <!-- JS Global -->
     <script src="assets/plugins/jquery/jquery-1.11.1.min.js "></script>
@@ -655,10 +1214,47 @@
                     }
                 })
                 // rotate arrow top down
+                // rotate arrow top down
             $('button').click(function() {
                 $('.rotate').toggleClass("down ");
             })
         })
+
+
+
+
+        // toggle details
+        $(".details_btn").click(function() {
+            $("#collapseTwo").slideToggle();
+        });
+        $(".details_btn2").click(function() {
+            $("#collapseTwo2").slideToggle();
+        });
+        $(".details_btn22").click(function() {
+            $("#collapseTwo22").slideToggle();
+        });
+        $(".details_btn3").click(function() {
+            $("#collapseTwo3").slideToggle();
+        });
+        $(".details_btn33").click(function() {
+            $("#collapseTwo33").slideToggle();
+        });
+
+        // header fix
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
 
         // vertical tab options
         $(document).on("click ", ".naccs .menu div ", function() {

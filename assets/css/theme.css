@@ -9615,11 +9615,10 @@
                 font-size: 36px;
                 line-height: 36px;
             }
-            
-            .form-search.light .row-submit .container-fluid>.inner {
+            /* .form-search.light .row-submit .container-fluid>.inner {
                 border-top: solid 1px #d3d3d3;
                 background-color: #e9e9e9;
-            }
+            } */
             
             .form-search.light .row-submit a {
                 color: #7f7f7f;

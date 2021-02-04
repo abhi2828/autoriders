@@ -9855,9 +9855,15 @@ input[type=checkbox] {
 }
 
 .nav-tabs>li.active>a {
-    color: #fff;
+    color: #000 !important;
     cursor: default;
-    background-color: red;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.nav-tabs>li>a {
+    color: #000 !important;
+    cursor: default;
     border: 1px solid red;
     text-align: center;
 }
@@ -9866,7 +9872,6 @@ input[type=checkbox] {
 .nav-tabs>li.active>a:hover {
     color: #fff;
     cursor: default;
-    background-color: red;
     border: 1px solid red;
 }
 

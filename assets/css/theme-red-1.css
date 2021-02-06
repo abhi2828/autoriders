@@ -255,6 +255,7 @@ body {
 
 .swiper-slide {
     height: auto;
+    min-height: 52px;
 }
 
 
@@ -1677,6 +1678,7 @@ input[type=checkbox] {
 
 .is-sticky .logo img {
     max-width: none;
+    margin-top: 2px;
     height: 40px;
 }
 
@@ -1738,7 +1740,7 @@ input[type=checkbox] {
     line-height: 1.72;
     text-align: left;
     display: inline-block;
-    margin: 0 auto !important;
+    margin: 5px auto !important;
 }
 
 @media (max-width: 991px) {

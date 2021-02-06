@@ -9858,7 +9858,7 @@ input[type=checkbox] {
 }
 
 .nav-tabs>li.active>a {
-    color: #000 !important;
+    color: red !important;
     cursor: default;
     border: 1px solid red;
     text-align: center;

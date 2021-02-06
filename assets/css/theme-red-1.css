@@ -1541,6 +1541,7 @@ input[type=checkbox] {
 
 .wide .sticky-wrapper .header {
     width: 100% !important;
+    height: auto;
 }
 
 .sticky-wrapper .header {
@@ -1739,7 +1740,7 @@ input[type=checkbox] {
     font-family: 'Raleway', sans-serif;
     line-height: 1.72;
     text-align: left;
-    display: inline-block;
+    display: iline-block;
     margin: 5px auto !important;
 }
 
